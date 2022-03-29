@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat';
+}
+
+body {
+  min-width: fit-content;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: lighter;
+  color: #282828;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 16px;
+  padding-bottom: 5px;
+}
+
+.name-text {
+  font-size: 17px;
+  color: #7c7c7c;
+  font-weight: bold;
+}
+
+.about-me-text {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.mainbox {
+  width: 610px;
+  padding: 30px;
+  margin: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #ebebeb;
+  /* 1. 가로축 그림자(양수 오른쪽 음수 왼쪽)
+     2. y축으로 그림자 이동
+     3. 그림자의 블러
+     4. 그림자의 퍼짐도
+  */
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  font-size: 12px;
+  color: #919191;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+.float-wrap {
+  /* float의 요소들을 묶어주고 다음에 오는 요소들이 float의
+  영향을 받지 않게 해줌*/
+  overflow: hidden;
+}
+
+.title-text {
+  font-size: 11px;
+  font-weight: bold;
+  color: #282828;
+  /* float 둥둥 떠다니다 다른 글씨랑 겹치는 성징을 가짐 */
+  float: left;
+}
+
+.year-text {
+  font-size: 11px;
+  font-weight: bold;
+  color: #282828;
+  float: right;
+}
+
+.desc-text {
+  font-size: 9px;
+}
+
+.desc-subtext {
+  font-size: 9px;
+  color: #282828;
+  padding-left: 16px;
+}
+
+.title-box {
+  text-align: right;
+}
+
+.sns-img {
+  width: 12px;
+  height: 12px;
+}
+
+.sns-wrap {
+  text-align: right;
+}
