@@ -1,6 +1,8 @@
-##### a 태그
+#3일차
 
 > Don't forget to code your dream.
+
+##### a 태그
 
 - a 요소는 하이퍼 텍스트 링크를 만들 때 사용. href 속성을 통해 경로를 지정할 수 있다. 이것을 사용하지 않고 자바스크립트 경로를 지정할 수 있지만 이것은 웹 접근성에 위배된다. html 문법상 sections, grouping content 요소들은 텍스트 레벨 요소의 자식으로 사용되지 않지만, 앵커 태그만 예외적으로 sections, grouping content 요소를 자식으로 하는것이 허용된다. 또는 a 요소 속에 a 요소가 들어가지 않는다.
 
