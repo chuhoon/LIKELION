@@ -1,4 +1,4 @@
-#3일차
+# 3일차
 
 > Don't forget to code your dream.
 
