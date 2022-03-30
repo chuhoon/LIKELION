@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>c</title>
+  </head>
+  <style>
+    #hello {
+      font-size: 15px;
+      font-weight: 600;
+    }
+  </style>
+  <body>
+    <p>
+      <!-- 굵은 글꼴 중첩 X -->
+      Lorem, ipsum
+      <strong>dolor sit amet consectetur adipisicing elit.</strong> Nesciunt
+      fugiat officiis ea accusantium autem ab <b>nisi</b> asperiores itaque
+      earum quam perspiciatis corrupti esse aspernatur, sunt, adipisci accusamus
+      maiores quo repellat?
+    </p>
+
+    <!-- i 기울임 주언어와 다른 언어로 표현된 부분, 전문언어 구분해야하는 부분
+      em은 기울임 글꼴도 있고 강조의 의미도 있음 -->
+    <p>시장안은 사람들의 활기로 가득차 있었다.</p>
+    <p>
+      상인 : 이 상품은 현재 <em>30%</em> 할인중입니다! 나 : 아하 그렇군요!
+      <i> '흠.. 왜 하필 지금 할인하는걸까?!' </i> 좀 더 구경하고 올게요!
+    </p>
+    <p>나는 상인의 의도를 의심할 수 밖에 없었다.</p>
+    <p>
+      <!-- define 태그는 정의 p, dt,dd section 요소로 사용했을 때 dfn 정의에 대한 설명으로 사용. 사용 빈도 낮음 -->
+      <dfn>WWW</dfn>는 인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수
+      있는 전 세계적인 정보 공간을 말한다. - 위키백과
+    </p>
+    <!-- 태그의 약자를 나타내고 싶을 때 사용 -->
+    <abbr title="World Wide Web">WWW</abbr>는 인터넷에 연결된 컴퓨터를 통해
+    사람들이 정보를 공유할 수 있는 전 세계적인 정보 공간을 말한다. - 위키백과
+    <!-- 아랫첨자 sub 윗첨자 sup -->
+    <p>H<sub>2</sub>0</p>
+    <p>x<sup>2</sup>=4</p>
+    <!-- span 줄 바꿈 없이 영역을 묶는 용도 별 다른 의미 없음. div와 같이 최후 수단으로 사용 -->
+    <p><span id="hello">안녕하세요</span> 저의 이름은 ㅇㅇㅇ입니다.</p>
+  </body>
+</html>

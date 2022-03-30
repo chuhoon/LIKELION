@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>br</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+      Quam modi sequi nemo nulla ducimus quod est repudiandae, adipisci impedit
+      magni architecto dolorem fuga dicta, id, aspernatur veritatis optio
+      nostrum? Officiis.
+    </p>
+    <!-- 기본 속성일 때 한 줄이 길어서 넘칠 경우 자동 줄바꿈 nowrap으로 설정되면 줄바꿈 X -->
+    <p style="white-space: nomal">
+      <!-- wbr 텍스트 박스에서 한줄로 표시가 되지 않을 때 줄바꿈 -->
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. <wbr /> Dolorem
+      aspernatur praesentium eius iusto quis nulla laborum, ullam vitae quas
+      modi distinctio neque alias quaerat aut. Rem sunt eos nihil quis.
+    </p>
+    <!-- 한글이 word 단위로 떨어지게 한다.  -->
+    <p style="word-break: keep-all">
+      안녕하세요. 저의 이름은 경훈입니다. 안녕하세요. 저의 이름은 경훈입니다.
+      안녕하세요. 저의 이름은 경훈입니다. 안녕하세요. 저의 이름은 경훈입니다.
+      안녕하세요. 저의 이름은 경훈입니다. 안녕하세요. 저의 이름은 경훈입니다.
+      안녕하세요. 저의 이름은 경훈입니다. 안녕하세요. 저의 이름은 경훈입니다.
+    </p>
+  </body>
+</html>
