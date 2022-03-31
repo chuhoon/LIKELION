@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: 'Nanum Gothic', sans-serif;
   min-width: fit-content;
 }
 
@@ -30,6 +31,7 @@ h2 {
 }
 
 .about-me-text {
+  padding-left: 20%;
   font-size: 10px;
   line-height: 16px;
 }
@@ -47,6 +49,11 @@ h2 {
      4. 그림자의 퍼짐도
   */
   box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  float: left;
+  padding-right: 12px;
 }
 
 footer {
@@ -84,6 +91,12 @@ section {
 
 .desc-text {
   font-size: 9px;
+  float: left;
+}
+
+.desc-year {
+  font-size: 9px;
+  float: right;
 }
 
 .desc-subtext {
@@ -93,14 +106,5 @@ section {
 }
 
 .title-box {
-  text-align: right;
-}
-
-.sns-img {
-  width: 12px;
-  height: 12px;
-}
-
-.sns-wrap {
   text-align: right;
 }
