@@ -12,6 +12,6 @@
 
 - [4일차 챌린지 진행중:ghost:](https://github.com/chuhoon/LikeLion/tree/master/FE4-1)
 
-- [5일차:gift_heart:]()
+- [5일차:gift_heart:](https://github.com/chuhoon/LikeLion/tree/master/FE5)
 
 - [5일차챌린지:jack_o_lantern:](https://github.com/chuhoon/LikeLion/tree/master/FE5_challenge)
