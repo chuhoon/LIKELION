@@ -16,3 +16,5 @@
 
 등 기초적인 css 배움...
 내일 제코베 강의 기대된다🐤
+
+![이력서](https://user-images.githubusercontent.com/68219145/161260166-afed3ae4-0289-4aa4-ab6d-82cc43e04e12.PNG)
