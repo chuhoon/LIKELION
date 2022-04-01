@@ -1,0 +1,156 @@
+/* 정리
+   1. 구체적인 덩어리를 먼저 나눠라. 컨테츠 막 집어넣지 X
+   2. 구분을 위해 각각 시각적으로 힌트를 줘야한다. 백그라운드컬러를 주고 이미지 넣는 등
+   3. 기본(레이아웃) 스타일만 짠다. 안에 내용물을 막 넣기 전에 공간부터 마련 기본 margin/padding
+   4. 요리 손질(요소, 타입셀렉터)부터 먼저. 초기화를 통해 가장 담백한 상태로 만들기 inherit initial margin 0 padding 0
+   5. 그때부터 class를 사용해 디테일한 작업 시작
+*/
+/* 타입 셀렉터는 위험하다. 초기화 할 때만 사용하자 */
+/* 선택자 운선순위 */
+
+body {
+  margin: initial;
+  background-image: url(images/background.gif);
+  background-size: cover;
+  background-attachment: fixed;
+  /* 배경 이미지가 스크롤에 영향 X */
+  background-position: center;
+}
+
+body,
+ul,
+p {
+  padding: 0;
+  margin: initial;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  /* 원래 상속이 지원되는 속성은 초기화 할 때 inherit 키워드 사용.
+  상속이 지원되지 않으면 initial */
+  font-size: inherit; /* 부모 요소의 font-size를 상속 받는다. */
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* div 셀럭터, 선택자 : type selector */
+/* div { */
+/* 프로퍼티 속성 : value 값 */
+/* background-color: #ddd; */
+/* width: 800px; auto시에 부모 너비 기준으로 가득참 */
+/* height: 400px; div 속 contents를 기준으로 높이가 조절된다.
+  /*margin: 20px; 바깥쪽 여백
+  /*padding: 100px; 안쪽 여백
+  border: 20px solid red; /* 두께, 선스타일, 선 색
+  margin-left: auto; /* 남는 공간 여백을 사용하겠다.
+  margin-right: auto; /* margin: 0 auto
+  margin: 0 auto; /* 가운대 정렬 */
+/* } */
+
+.wrapper {
+  background-color: #ddd;
+  width: 800px;
+  margin: 100px auto;
+  /* overflow: hidden; */
+}
+
+.header {
+  background-image: url(images/cover04.png);
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+}
+
+.header img.profile {
+  border: 10px solid white;
+  border-radius: 100px / 50px;
+}
+
+.header h1 {
+  font-size: 100px;
+}
+
+/* p는 블록레벨이기에 div와 같이 border가 깔린다. */
+.header p {
+  border-top: 4px solid;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+
+.section {
+  background-image: url(images/icon-information.png);
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.section.skills {
+  background-image: url(images/icon-skills.png);
+}
+
+.section h2 {
+  color: salmon;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.list li {
+  border-left: 5px solid #ddd;
+  padding: 2px 20px;
+}
+
+.list li:hover {
+  border-color: pink;
+  color: pink;
+}
+
+.footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer .icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  color: white;
+  /* 이미지 스프라이트 기법 => 웹 성능 */
+  background-image: url(images/icons.png);
+  text-indent: -9999px; /* IR기법 */
+  background-size: 144px 96px;
+}
+
+.icon.github {
+  background-color: black;
+  background-position: left top;
+}
+
+.icon.facebook {
+  background-color: dodgerblue;
+  background-position: center top;
+}
+
+.icon.contact {
+  background-color: orangered;
+  background-position: right top;
+}
+
+.icon:hover {
+  background-position-y: bottom;
+}
