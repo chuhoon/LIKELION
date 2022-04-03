@@ -7,35 +7,33 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="signin_card">
-      <h3>로그인 또는 회원가입</h3>
-      <div class="login">
-        <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
-        <p>
-          <input type="checkbox" id="loginCheckBox" />
-          <label for="loginCheckBox"><em></em>로그인 상태 유지</label>
-        </p>
-        <a class="btn btn1" href="">로그인</a>
-        <p>
-          <a class="signup" href="./signup.html">회원가입</a> |
-          <a class="signup" href="">아이디/비밀번호 찾기</a>
-        </p>
-        <span class="or-txt">또는</span>
-        <a class="btn btn2" href="https://www.google.com/"
-          >구글 계정으로 로그인</a
-        >
-        <a class="btn btn3" href="https://www.facebook.com/"
-          >페이스북 계정으로 로그인</a
-        >
-        <a class="btn btn4" href="https://www.naver.com/"
-          >네이버 계정으로 로그인</a
-        >
-        <a
-          class="btn btn5"
-          href="https://www.kakaocorp.com/page/service/service/KakaoTalk"
-          >카카오톡 계정으로 로그인</a
-        >
-      </div>
-    </div>
+    <section class="signin_card">
+      <header class="signinheader">
+        <h1>Welcome to Nature!</h1>
+      </header>
+      <article class="idpw_wrap">
+        <div class="id">
+          <input
+            type="text"
+            id="id"
+            name="id"
+            placeholder="아이디를 입력하세요."
+            title="Id"
+            class="input_text"
+          />
+        </div>
+        <div class="pw">
+          <input
+            type="password"
+            id="pw"
+            name="pw"
+            placeholder="비밀번호를 입력하세요."
+            title="pw"
+            class="input_text"
+          />
+        </div>
+        <button class="signinbtn">로그인</button>
+      </article>
+    </section>
   </body>
 </html>
