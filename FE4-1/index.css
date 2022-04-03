@@ -9,36 +9,76 @@ body {
   background-position: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .signin_card {
-  border: 2px solid lightslategray;
+  border: 2px solid #ddd;
   border-radius: 30px;
   width: 700px;
-  margin: 200px auto;
-  background-color: #f6f5f0;
+  margin: 100px auto;
+  background-color: rgba(245, 246, 240, 0.8);
 }
 
 .signinheader {
-  border-bottom: 1px solid lightslategray;
+  border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
 .idpw_wrap {
-  margin: 30px;
+  margin: 43px;
 }
 
 .input_text {
   width: 580px;
-  color: #777;
-  border-radius: 5px;
-  border-color: lightslategray;
-  font-size: 15px;
-  padding: 24px 17px;
-  margin: 12px 13px;
+  color: #ddd;
+  border-radius: 8px;
+  border-color: #ddd;
+  font-size: 18px;
+  padding: 17px 17px;
+  margin: 12px 0px;
+}
+
+.logincheck {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+input[id='chkbox'] {
+  display: none;
+}
+
+input[id='chkbox'] + label em {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  background: url(https://static.nid.naver.com/images/ui/myinfo/pc_chcek_off_s_20.png)
+    0 0 no-repeat;
+  vertical-align: middle;
+}
+
+input[id='chkbox']:checked + label em {
+  background: url(./CKH_LION_img/icon_check.png) 0 0 no-repeat;
 }
 
 .signinbtn {
-  width: 580px;
-  border-radius: 5px;
+  width: 616px;
+  padding: 10px 0;
+  font-size: 30px;
+  margin-top: 13px;
+  border-radius: 8px;
   background-color: darkgreen;
   color: white;
+}
+
+.signinfooter {
+  text-align: center;
+}
+
+.signinfooter a {
+  margin: 10px;
+  font-size: 16px;
 }
