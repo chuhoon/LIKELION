@@ -10,7 +10,7 @@
 
 - [4일차:santa:](https://github.com/chuhoon/LikeLion/tree/master/FE4)
 
-- [4일차 챌린지 진행중:ghost:](https://github.com/chuhoon/LikeLion/tree/master/FE4-1)
+- [4일차 챌린지:ghost:](https://github.com/chuhoon/LikeLion/tree/master/FE4_challenge)
 
 - [5일차:gift_heart:](https://github.com/chuhoon/LikeLion/tree/master/FE5)
 
