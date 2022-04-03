@@ -5,60 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
-    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="./signup.css" />
   </head>
   <body>
-    <section class="information_card">
-      <header class="informationheader">
-        <h1>Signup Nature</h1>
+    <section class="signup_card">
+      <header class="signupheader">
+        <h1>Sign up Nature</h1>
       </header>
-      <article class="information_wrap">
-        <article class="signupinformation">
-          <div class="confirminformation">
-            <input type="checkbox" id="chkbox" />
-            <label for="chkbox"><em></em>Nature 이용약관 동의(필수)</label>
-            <div class="information_box">
-              <h3>여러분을 환영합니다.</h3>
-              <p class="article_text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                explicabo, perferendis distinctio provident alias eos
-                consequuntur necessitatibus ad ut eaque mollitia eligendi nihil
-                quam a dolorem enim, iusto autem inventore!
-              </p>
-            </div>
-          </div>
-          <div class="confirminformation">
-            <input type="checkbox" id="chkbox" />
-            <label for="chkbox"
-              ><em></em>개인정보 수집 및 이용 동의(필수)</label
-            >
-            <div class="information_box">
-              <p class="article_text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                explicabo, perferendis distinctio provident alias eos
-                consequuntur necessitatibus ad ut eaque mollitia eligendi nihil
-                quam a dolorem enim, iusto autem inventore!
-              </p>
-            </div>
-          </div>
-          <div class="confirminformation">
-            <input type="checkbox" id="chkbox" />
-            <label for="chkbox"><em></em>Nature 이용약관 동의(필수)</label>
-            <div class="information_box">
-              <p class="article_text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-                explicabo, perferendis distinctio provident alias eos
-                consequuntur necessitatibus ad ut eaque mollitia eligendi nihil
-                quam a dolorem enim, iusto autem inventore!
-              </p>
-            </div>
-          </div>
-          <div class="confirminformation">
-            <input type="checkbox" id="chkbox" />
-            <label for="chkbox"><em></em>프로모션 정보 수신 동의(선택)</label>
-          </div>
-          <button class="signinbtn">확인</button>
-        </article>
+      <article class="signupform">
+        <div class="signup_id">
+          <h4>아이디</h4>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            placeholder="아이디를 입력하세요."
+            title="id"
+            class="input_text"
+          />
+        </div>
+        <div class="signup_pw">
+          <h4>비밀번호</h4>
+          <input
+            type="password"
+            id="pw"
+            name="pw"
+            placeholder="비밀번호를 입력하세요."
+            title="pw"
+            class="input_text"
+          />
+        </div>
+        <div class="signup_pwconfirm">
+          <h4>비밀번호 재확인</h4>
+          <input
+            type="password"
+            id="confirmpw"
+            name="confirmpw"
+            placeholder="비밀번호를 확인하세요."
+            title="confirmpw"
+            class="input_text"
+          />
+        </div>
+        <div class="signup_name">
+          <h4>이름</h4>
+          <input
+            type="text"
+            placeholder="이름"
+            id="signup_name"
+            class="input_text"
+          />
+        </div>
+        <div class="signup_email">
+          <h4>본인 확인 이메일</h4>
+          <input
+            type="email"
+            placeholder="이름"
+            id="email"
+            class="input_text"
+          />
+        </div>
+        <button class="signupbtn">
+          <a href="https://github.com/chuhoon">가입하기</a>
+        </button>
+        <p class="signinfooter">
+          이미 가입하셨다면? <a href="https://github.com/chuhoon">로그인</a>
+        </p>
       </article>
     </section>
   </body>

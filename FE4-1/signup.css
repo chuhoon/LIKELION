@@ -9,12 +9,17 @@ body {
   background-position: center;
 }
 
-h3,
-p {
-  margin: 0;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.information_card {
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.signup_card {
   border: 2px solid #ddd;
   border-radius: 30px;
   width: 700px;
@@ -22,16 +27,12 @@ p {
   background-color: rgba(245, 246, 240, 0.8);
 }
 
-.information_wrap {
-  margin: 43px;
-}
-
-.informationheader {
+.signupheader {
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
-.idpw_wrap {
+.signupform {
   margin: 43px;
 }
 
@@ -41,48 +42,28 @@ p {
   border-radius: 8px;
   border-color: #ddd;
   font-size: 18px;
-  padding: 24px 17px;
-  margin: 12px 0px;
+  padding: 17px 13px;
+  margin: 10px 0px 20px;
 }
 
-.confirminformation {
-  font-size: 17px;
-  margin-bottom: 25px;
-}
-
-input[id='chkbox'] {
-  display: none;
-}
-
-input[id='chkbox'] + label em {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  margin-right: 5px;
-  background: url(https://static.nid.naver.com/images/ui/myinfo/pc_chcek_off_s_20.png)
-    0 0 no-repeat;
-  vertical-align: middle;
-}
-
-input[id='chkbox']:checked + label em {
-  background: url(./CKH_LION_img/icon_check.png) 0 0 no-repeat;
-}
-
-.signinbtn {
+.signupbtn {
   width: 616px;
-  padding: 10px 0;
-  font-size: 30px;
+  padding: 13px 0;
+  font-size: 20px;
   margin-top: 13px;
   border-radius: 8px;
   background-color: darkgreen;
   color: white;
+  cursor: pointer;
 }
 
-.information_box {
-  height: 88px;
-  border: 1px solid #dadada;
-  background: white;
-  box-sizing: border-box;
-  overflow: auto;
-  margin-top: 4px;
+.signinfooter {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.signinfooter a {
+  color: darkgreen;
+  margin: 10px;
+  font-size: 16px;
 }
