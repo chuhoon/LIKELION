@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button</title>
+  </head>
+  <body>
+    <!-- 
+      - `submit`: 버튼이 서버로 양식 데이터를 제출합니다. 지정하지 않은 경우 기본값이며, 유효하지 않은 값일 때도 사용합니다.
+      때문에 form 양식을 제출하기 위한 용도가 아니라면 반드시 type을 선언해줍시다.
+      - `reset`: `<input type="reset">`처럼, form의 모든 값을 초기화시킵니다.
+      - `button`: 클릭 가능한 버튼입니다. 사용자가 기능을 부여하기 전까지는 별 다른 작동을 하지 않습니다.
+      button vs input 무엇을 써야할까?
+      -> 버튼은 input보다 스타일 적용이 쉽다. input은 닫는 태그가 없기에 value 특성에 텍스트 값 밖에 지정하지 못하지만
+      butoon은 내부에 여러가지 자식을 추가할 수 있고 ::after와 :before와 같은 가상 요소를 사용하는 것도 가능합니다.
+     -->
+    <form action="" method="get">
+      <button id="search_btn" type="submit" title="검색">
+        <span class="blind">검색</span>
+        <span class="ico_search_submit"></span>
+      </button>
+    </form>
+  </body>
+</html>
