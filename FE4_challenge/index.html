@@ -12,31 +12,31 @@
         <h1>Welcome to Nature!</h1>
       </header>
       <article class="idpw_wrap">
-        <div class="id">
-          <input
-            type="text"
-            id="id"
-            name="id"
-            placeholder="아이디를 입력하세요."
-            title="Id"
-            class="input_text"
-          />
-        </div>
-        <div class="pw">
-          <input
-            type="password"
-            id="pw"
-            name="pw"
-            placeholder="비밀번호를 입력하세요."
-            title="pw"
-            class="input_text"
-          />
-        </div>
-        <div class="logincheck">
-          <input type="checkbox" id="chkbox" />
-          <label for="chkbox"><em></em>로그인 상태 유지</label>
-        </div>
-        <button class="signinbtn">로그인</button>
+        <form action="" method="get">
+          <div class="id">
+            <input
+              type="text"
+              id="userId"
+              name="id"
+              placeholder="아이디를 입력하세요."
+              class="input_text"
+            />
+          </div>
+          <div class="pw">
+            <input
+              type="password"
+              id="userPw"
+              name="pw"
+              placeholder="비밀번호를 입력하세요."
+              class="input_text"
+            />
+          </div>
+          <div class="logincheck">
+            <input type="checkbox" id="chkbox" />
+            <label for="chkbox"><em></em>로그인 상태 유지</label>
+          </div>
+          <button class="signinbtn" type="submit">로그인</button>
+        </form>
         <p class="signinfooter">
           <a href="">아이디 찾기</a>|<a href="">비밀번호 찾기</a>|
           <a href="./information.html">회원가입</a>
