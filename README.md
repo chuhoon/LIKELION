@@ -15,3 +15,7 @@
 - [5일차:gift_heart:](https://github.com/chuhoon/LikeLion/tree/master/FE5)
 
 - [5일차챌린지:jack_o_lantern:](https://github.com/chuhoon/LikeLion/tree/master/FE5_challenge)
+
+- [6일차:snowman:](https://github.com/chuhoon/LikeLion/tree/master/FE6)
+
+- [6일차챌린지 진행중:dog:](https://github.com/chuhoon/LikeLion/tree/master/FE6_challenge)
