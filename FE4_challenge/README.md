@@ -8,7 +8,7 @@
 <br>
 
 2. 개인정보 동의
-   ![개인정보](<![information](https://user-images.githubusercontent.com/68219145/161471664-b2f59c07-363e-4e2a-9342-164b3ec9afab.PNG)>)
+   ![개인정보](https://user-images.githubusercontent.com/68219145/161471783-775e8284-f0f0-43d9-a8bf-0ffd24edf794.PNG)
 
 <br>
 
