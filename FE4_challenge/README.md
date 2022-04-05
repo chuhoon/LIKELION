@@ -2,6 +2,8 @@
 
 > Don't forget to code your dream.
 
+[Auth 만들기 링크](https://chuhoon.github.io/LikeLion/FE4_challenge/index.html)
+
 1. 로그인
    ![로그인](https://user-images.githubusercontent.com/68219145/161441028-f4eecad3-1cf8-44c6-9439-c1b12f3dc1cc.PNG)
 
