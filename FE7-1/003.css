@@ -1,0 +1,6 @@
+@import '003_ex.css';
+/* 다중 css */
+
+p {
+  background-color: red;
+}

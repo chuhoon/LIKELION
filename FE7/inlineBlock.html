@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록레벨 요소 vs 인라인 요소</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* 인라인은 높이와 넓이를 조절하지 못함 자기의 컨텐츠 넓이만큼을 차지한다.
+         반면 블럭은 높이와 넓이를 조절하는 것이 가능하다.
+         display : block;   - 높이와 넓이를 조절 가능한 것
+         display : inline;  - 높이와 넓이가 조절 불가능 자기 컨텐츠 넓이 만큼 차지
+         display : inline-block;    - 높이와 넓이 조절 가능, 텍스트와 같이 옆으로 넘어감
+      */
+      p {
+        display: block;
+        background-color: aqua;
+        width: 300px;
+        height: 300px;
+      }
+      span {
+        font-size: 16px;
+        display: inline-block;
+        background-color: blue;
+        width: 150px;
+        height: 150px;
+      }
+      /* span태그 띄어쓰기 사라지게 하기 위해 
+        1. font-size: 0
+        2. 엔터를 삭제
+        3. -margin을 준다. 폰트 종류가 달라지면 맞지 않음
+        4. float로 해결 가능
+      */
+      .one {
+        font-size: 0;
+      }
+
+      .two {
+        display: inline;
+        font-family: 'Rubik Wet Paint', cursive;
+      }
+
+      .three {
+        /* 라인하이트는 픽셀로 정해주자 font마다 height가 다르기에 설정 */
+        line-height: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>hello world</p>
+    <p>hello world</p>
+    <div class="one">
+      <span>hello world</span>
+      <span>hello world</span>
+    </div>
+    <div class="three">
+      <span class="two">h</span>ello <span class="two">h</span>ello
+    </div>
+  </body>
+</html>
