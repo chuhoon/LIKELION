@@ -7,6 +7,10 @@ body {
   background-position: center;
 }
 
+table {
+  margin: 0;
+}
+
 p {
   display: inline-block;
 }
@@ -21,35 +25,35 @@ tr,
 td,
 th {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 section {
   border: 2px solid #ddd;
   border-radius: 30px;
-  width: 900px;
-  margin: 100px auto;
+  width: 800px;
+  margin: 70px auto;
   padding: 0 30px;
   background-color: rgba(245, 246, 240, 0.8);
 }
 
 .t1 {
-  margin: 30px 50px 0 30px;
+  margin: 30px 20px 0 63px;
   font-size: 70px;
   font-weight: 700;
 }
 
 .t2 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .month {
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 150px;
   border-collapse: collapse;
 }
 
 .whole {
-  padding: 25px;
+  margin: 25px auto;
 }
