@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./chuhoon.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+p {
+  display: inline-block;
+}
+
+caption {
+  margin-top: 30px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+tr,
+td,
+th {
+  text-align: center;
+  font-size: 18px;
+}
+
+section {
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  width: 900px;
+  margin: 100px auto;
+  padding: 0 30px;
+  background-color: rgba(245, 246, 240, 0.8);
+}
+
+.t1 {
+  margin: 30px 50px 0 30px;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.t2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.month {
+  width: 400px;
+  height: 250px;
+  border-collapse: collapse;
+}
+
+.whole {
+  padding: 25px;
+}
