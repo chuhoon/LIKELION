@@ -14,7 +14,7 @@
 4. float : 둥둥 떠다니다 다른 글씨랑 겹치는 성징을 가짐
 5. overflow: hidden : float의 요소들을 묶어주고 다음에 오는 요소들이 float의 영향을 받지 않게 해줌
 
-등 기초적인 css 배움...
+등 기초적인 css 배움..
 내일 제코베 강의 기대된다🐤
 
 [이력서 만들기 링크](https://chuhoon.github.io/LikeLion/이력서/index.html)
