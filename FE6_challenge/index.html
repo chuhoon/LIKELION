@@ -6,40 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FE6_challenge</title>
   </head>
+  <link rel="stylesheet" href="index.css" />
   <body>
     <form action="" method="get">
       <ul>
-        <li>
-          <header>나와 잘 맞는 회사는?</header>
+        <li class="header">
+          <h1>나와 잘 맞는 회사는?</h1>
+          <br />
           <p>가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미 없다.</p>
         </li>
         <li>
-          다음 문자중에 왠지 마음에 드는 것을 하나 고르세요
-          <div>
+          <p class="question">
+            다음 문자중에 왠지 마음에 드는 것을 하나 고르세요
+          </p>
+          <div class="box">
             <input type="radio" name="company" id="naver" value="네" required />
             <label for="naver">네</label>
           </div>
-          <div>
+          <div class="box">
             <input type="radio" name="company" id="kakao" value="카" />
             <label for="kakao">카</label>
           </div>
-          <div>
+          <div class="box">
             <input type="radio" name="company" id="line" value="라" />
             <label for="line">라</label>
           </div>
-          <div>
+          <div class="box">
             <input type="radio" name="company" id="cupang" value="쿠" />
             <label for="cupang">쿠</label>
           </div>
-          <div>
+          <div class="box">
             <input type="radio" name="company" id="base" value="베" />
             <label for="base">베</label>
           </div>
         </li>
         <li>
-          친구와 문자를 합니다. 다음중 어떤 메신저를 이용하시겠습니까? 모두
-          골라주세요.
-          <div>
+          <p class="question">
+            친구와 문자를 합니다. 다음중 어떤 메신저를 이용하시겠습니까? 모두
+            골라주세요.
+          </p>
+          <div class="box">
             <input
               type="checkbox"
               name="company"
@@ -49,7 +55,7 @@
             />
             <label for="naver">네</label>
           </div>
-          <div>
+          <div class="box">
             <input
               type="checkbox"
               name="company"
@@ -59,7 +65,7 @@
             />
             <label for="kakao">카</label>
           </div>
-          <div>
+          <div class="box">
             <input
               type="checkbox"
               name="company"
@@ -69,7 +75,7 @@
             />
             <label for="line">라</label>
           </div>
-          <div>
+          <div class="box">
             <input
               type="checkbox"
               name="company"
@@ -79,7 +85,7 @@
             />
             <label for="cupang">쿠</label>
           </div>
-          <div>
+          <div class="box">
             <input
               type="checkbox"
               name="company"
@@ -95,7 +101,15 @@
             >면접에서 자신의 포부를 한 문장으로 얘기한다면?</label
           >
           <div>
-            <input type="text" name="question1" id="sentence1" />
+            <textarea
+              required
+              class="interview"
+              name="interview1"
+              id="sentence1"
+              cols="50"
+              rows="1"
+              placeholder="내 답변"
+            ></textarea>
           </div>
         </li>
         <li>
@@ -104,7 +118,15 @@
             직전, 자기 자신에게 해주고 싶은말은?</label
           >
           <div>
-            <input type="text" name="question2" id="sentence2" />
+            <textarea
+              required
+              class="interview"
+              name="interview2"
+              id="sentence1"
+              cols="50"
+              rows="1"
+              placeholder="내 답변"
+            ></textarea>
           </div>
         </li>
         <li>
@@ -112,7 +134,7 @@
             >다음 중 기술 면접때 듣고 싶은 질문이 아닌 것은?</label
           >
           <div>
-            <select name="skillquestion" id="skills">
+            <select name="skillquestion" id="skills" class="skillquestion">
               <option value="">선택</option>
               <option value="">HTML</option>
               <option value="">CSS</option>
@@ -121,24 +143,26 @@
           </div>
         </li>
         <li>
-          <h2>취업을 희망하는 날짜를 선택해주세요</h2>
+          <p class="timeQuestion">취업을 희망하는 날짜를 선택해주세요</p>
           <label for="date">날짜</label>
           <div>
-            <input type="date" name="Date" id="date" />
+            <input type="date" name="Date" id="date" required />
           </div>
         </li>
         <li>
-          <h2>업무를 시작하기에 가장 적당한 시간을 고르세요</h2>
-          <label for="time">시간</label>
+          <p class="timeQuestion">
+            업무를 시작하기에 가장 적당한 시간을 고르세요
+          </p>
+          <label for="time" required>시간</label>
           <div>
-            <input type="date" name="Date" id="date" />
+            <input type="time" name="Time" id="time" required />
           </div>
         </li>
+        <div class="footer">
+          <button type="submit" class="btn1">제출</button>
+          <button type="reset" class="btn2">양식 지우기</button>
+        </div>
       </ul>
-      <footer>
-        <button>제출</button>
-        <button>양식 지우기</button>
-      </footer>
     </form>
   </body>
 </html>

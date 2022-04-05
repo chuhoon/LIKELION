@@ -10,16 +10,18 @@
 
 - [4일차:santa:](https://github.com/chuhoon/LikeLion/tree/master/FE4)
 
-- [4일차 챌린지:ghost:](https://github.com/chuhoon/LikeLion/tree/master/FE4_challenge)
+- [4일차 챌린지:santa:](https://github.com/chuhoon/LikeLion/tree/master/FE4_challenge)
 
 - [5일차:gift_heart:](https://github.com/chuhoon/LikeLion/tree/master/FE5)
 
-- [5일차챌린지:jack_o_lantern:](https://github.com/chuhoon/LikeLion/tree/master/FE5_challenge)
+- [5일차 챌린지:gift_heart:](https://github.com/chuhoon/LikeLion/tree/master/FE5_challenge)
 
-- [6일차:snowman:](https://github.com/chuhoon/LikeLion/tree/master/FE6)
+- [6일차:dog:](https://github.com/chuhoon/LikeLion/tree/master/FE6)
 
-- [6일차챌린지 진행중:dog:](https://github.com/chuhoon/LikeLion/tree/master/FE6_challenge)
+- [6일차 챌린지:dog:](https://github.com/chuhoon/LikeLion/tree/master/FE6_challenge)
 
 - [7일차:tiger:](https://github.com/chuhoon/LikeLion/tree/master/FE7)
 
 - [7-1일차:tiger:](https://github.com/chuhoon/LikeLion/tree/master/FE7-1)
+
+- [7일차 챌린지 진행중 :tiger:]()
