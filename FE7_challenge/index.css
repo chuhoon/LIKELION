@@ -37,6 +37,11 @@ section {
   background-color: rgba(245, 246, 240, 0.8);
 }
 
+.month td:nth-child(1),
+th:nth-child(1) {
+  color: red;
+}
+
 .t1 {
   margin: 30px 20px 0 63px;
   font-size: 70px;

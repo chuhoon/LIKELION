@@ -13,4 +13,6 @@ CSS 들었던 강의 중에 가장 재밌었다. 최고..!
 
 속도 보다는 디테일, 가독성이 중요하다는 것을 느끼는 하루였다. 화이팅! :)
 
+[My bucketList 만들기 링크](https://chuhoon.github.io/LikeLion/FE5_challenge/index.html)
+
 ![220401](https://user-images.githubusercontent.com/68219145/161254182-db6f81a9-eed5-4486-bf4e-0a4f4ea2c9f9.PNG)
