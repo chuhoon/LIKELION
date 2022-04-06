@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4월 5일 문제풀이</title>
+  </head>
+  <body>
+    <!-- 
+      BODY의 Child는 몇개일까요? -> 4개
+      ul의 Child는 몇개일까요? -> 2개
+      ul의 자손/하위는 몇개일까요? -> 3개
+      div태그중에 3번째 Child 요소는 몇개일까요? -> 2개
+      ul 형제요소는 몇개일까요? -> 3개
+      div:nth-child(3){color:red} 하면 몇개의 div태그가 빨간 글씨가 될까요? -> 2개
+      body > span {color:blue;} 하면 몇개의 span태그가 파란글씨가 될까요? -> 1개
+     -->
+    <h1>Hello</h1>
+    <ul>
+      <li>List 1</li>
+      <li>List 2 <span>SPAN</span></li>
+    </ul>
+    <div class="wrap">
+      <div class="box">BOX1</div>
+      <div class="box">BOX2</div>
+      <div class="box">BOX3</div>
+    </div>
+    <span>Have a good <em>Coding</em></span>
+  </body>
+</html>

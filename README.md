@@ -25,3 +25,5 @@
 - [7-1일차:tiger:](https://github.com/chuhoon/LikeLion/tree/master/FE7-1)
 
 - [7일차 챌린지:tiger:](https://github.com/chuhoon/LikeLion/tree/master/FE7_challenge)
+
+- [8일차:koala:]()

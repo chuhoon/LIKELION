@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      /* 전체 선택자(*) 0점 */
+      * {
+        color: red;
+      }
+
+      /* 타입 선택자 1점 */
+      p {
+        color: blue;
+      }
+      /* Class 10점 */
+      .one {
+        color: green;
+      }
+      /* ID 선택자 100점 */
+      #two {
+        color: green;
+      }
+      /* 선택자 목록 1점 이건 타입선택자 */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hellow world</h1>
+    <p>hello world</p>
+    <p class="one">hello world</p>
+    <p id="two">hello world</p>
+  </body>
+</html>
