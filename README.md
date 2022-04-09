@@ -29,3 +29,5 @@
 - [8일차:koala:](https://github.com/chuhoon/LikeLion/tree/master/FE8)
 
 - [9일차:rabbit2:](https://github.com/chuhoon/LikeLion/tree/master/FE9)
+
+- 10일차 노션 특강:sunny:

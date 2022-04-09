@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow:hidden과 display:none의 차이</title>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+      }
+      .a {
+        display: none;
+        background-color: black;
+      }
+
+      .b {
+        overflow: hidden;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a"></div>
+    <div class="b">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita beatae
+        itaque alias quam enim! Illum reiciendis quia, necessitatibus sunt
+        veniam nam quae nobis perspiciatis rem earum pariatur blanditiis
+        explicabo incidunt?
+      </p>
+    </div>
+  </body>
+</html>
