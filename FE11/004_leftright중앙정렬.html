@@ -10,12 +10,20 @@
     body {
       margin: 0;
     }
-    div {
+
+    .one {
+      position: relative;
+      border: 5px solid black;
+      margin: 150px;
+      width: 500px;
+      height: 500px;
+    }
+    .two {
       margin: 0 auto;
       position: absolute;
       right: 0px;
       left: 0px;
-      /* top: 0px; */
+      top: 0px;
       /* bottom: 0px; */
       width: 100px;
       height: 100px;
@@ -23,6 +31,8 @@
     }
   </style>
   <body>
-    <div></div>
+    <div class="one">
+      <div class="two"></div>
+    </div>
   </body>
 </html>
