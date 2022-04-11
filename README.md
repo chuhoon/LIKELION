@@ -30,4 +30,6 @@
 
 - [9일차:rabbit2:](https://github.com/chuhoon/LikeLion/tree/master/FE9)
 
-- 10일차 노션 특강:sunny:
+- [10일차 노션 특강:sunny:]()
+
+- [11일차:computer:]()

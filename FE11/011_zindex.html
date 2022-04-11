@@ -2,6 +2,15 @@
 <html lang="ko">
   <head>
     <style>
+      div {
+        /* margin: 100px; */
+        width: 800px;
+        height: 800px;
+        position: relative;
+        background-color: blanchedalmond;
+        border: 1px solid black;
+        /* z-index: 999; */
+      }
       /* z-index를 통해 순서를 갖는다. */
       img:nth-child(1) {
         padding: 10px;
@@ -31,8 +40,10 @@
     </style>
   </head>
   <body>
-    <img src="https://via.placeholder.com/300" alt="" />
-    <img src="https://via.placeholder.com/400" alt="" />
-    <img src="https://via.placeholder.com/500" alt="" />
+    <div>
+      <img src="https://via.placeholder.com/300" alt="" />
+      <img src="https://via.placeholder.com/400" alt="" />
+      <img src="https://via.placeholder.com/500" alt="" />
+    </div>
   </body>
 </html>
