@@ -1,0 +1,90 @@
+/* utility CSS */
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.clear-fix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.container-login {
+  margin: 20px auto;
+  width: 350px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 18px 15px 17px;
+}
+
+.container-login a {
+  text-decoration: none;
+}
+
+.container-login .txt-login {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
+}
+
+.container-login .link-login {
+  display: block;
+  padding: 10px 0 12px;
+  margin: 0 0 16px 0;
+  background-color: #711bff;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.link-login .img-logo {
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+
+.container-find {
+  float: left;
+}
+
+.container-find .img-find {
+  float: left;
+  margin-right: 4px;
+}
+
+.container-find .link-id::after {
+  display: block;
+  float: right;
+  content: '';
+  width: 1px;
+  height: 12px;
+  margin: 0 4px;
+  background-color: #767676;
+}
+
+.container-find [class^='link'] {
+  float: left;
+}
+
+.container-join {
+  float: right;
+}
+
+.container-join .img-join {
+  margin-right: 4px;
+}
+
+.container-join [class$='join'] {
+  float: right;
+}
