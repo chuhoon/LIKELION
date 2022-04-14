@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transition Test</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        transition: all 1s;
+      }
+
+      .box:hover {
+        transform: scale(2) translateX(50px) rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
