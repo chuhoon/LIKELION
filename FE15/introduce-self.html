@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>introduce</title>
+  </head>
+  <body>
+    <h1>자기소개 글자 수 세기</h1>
+    <textarea onkeydown="counter();" id="introducecounter" cols="40" rows="3">
+안녕하세요</textarea
+    >
+    <span id="txt-count">(0/200)</span>
+    <script>
+      function counter() {
+        var count = document.getElementById('introducecounter').value;
+        if (count.length > 200) {
+          count = count.substring(0, 200);
+          document.getElementById('introducecounter').value = count;
+        }
+        document.getElementById('txt-count').innerHTML =
+          '(' + count.length + '/200)';
+      }
+      counter();
+    </script>
+  </body>
+</html>
