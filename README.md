@@ -45,3 +45,7 @@
 - [16일차:ox:](https://github.com/chuhoon/LikeLion/tree/master/FE16)
 
 - [17일차:rose:](https://github.com/chuhoon/LikeLion/tree/master/FE17)
+
+- [18일차:crocodile:](https://github.com/chuhoon/LikeLion/tree/master/FE18)
+
+- [19일차:crescent_moon:](https://github.com/chuhoon/LikeLion/tree/master/FE19)
