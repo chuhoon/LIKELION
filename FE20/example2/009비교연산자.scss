@@ -1,0 +1,34 @@
+// Sass 공식문서
+@debug 100 > 50; // true
+@debug 10px < 17px; // true
+@debug 96px >= 1in; // true
+@debug 1000ms <= 1s; // true
+
+@debug not true; // false
+@debug not false; // true
+
+@debug true and true; // true
+@debug true and false; // false
+
+@debug true or false; // true
+@debug false or false; // false
+
+.one {
+  font-size: 10px + 10px;
+}
+
+.two {
+  font-size: 12px - 3px;
+}
+
+.three {
+  font-size: 10px * 3;
+}
+
+.four {
+  font-size: (100px / 10);
+}
+
+.five {
+  font-size: 10px % 3;
+}

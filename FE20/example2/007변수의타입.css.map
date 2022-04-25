@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAyBA,AAAA,MAAM,CAAC;EACL,SAAS,EAXH,IAAI;CAYX;;AAED,AAAA,OAAO,CAAC;EACN,SAAS,EATH,IAAI;CAUX",
+    "sources": [
+        "007변수의타입.scss"
+    ],
+    "names": [],
+    "file": "007변수의타입.css"
+}

@@ -1,0 +1,13 @@
+// 정의하는 곳에서
+@mixin sample {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+a {
+  @include sample {
+    color: white;
+  }
+}
