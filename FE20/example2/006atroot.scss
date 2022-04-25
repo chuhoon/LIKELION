@@ -1,0 +1,13 @@
+$kyeonghun1: #fff;
+$kyeonghun2: #f00;
+$kyeonghun3: #00f;
+
+.one {
+  color: $kyeonghun1;
+  .two {
+    color: $kyeonghun2;
+    @at-root .three {
+      color: $kyeonghun3;
+    }
+  }
+}
