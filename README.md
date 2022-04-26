@@ -50,4 +50,4 @@
 
 - [19일차:crescent_moon:](https://github.com/chuhoon/LikeLion/tree/master/FE19)
 
-- [19일차:earth_asia:](https://github.com/chuhoon/LikeLion/tree/master/FE20)
+- [20일차:earth_asia:](https://github.com/chuhoon/LikeLion/tree/master/FE20)
