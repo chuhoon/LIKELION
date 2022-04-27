@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwindcss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- https://tailwindcss.com/docs/margin -->
+    <!-- https://tailwindcss.com/docs/padding -->
+    <div class="text-base">hello world</div>
+    <div class="text-5xl">hello world</div>
+    <div class="text-5xl p-5">hello world</div>
+    <div class="text-5xl pt-5">hello world</div>
+
+    <br />
+    <br />
+
+    <div class="text-base">hello world</div>
+    <div class="text-base my-3">hello world</div>
+    <!-- my-3 y는 위, 아래 mx-3은 x는 왼쪽, 오른쪽 -->
+    <div class="p-5">
+      <ul class="list-disc">
+        <li>helloworld</li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+      </ul>
+    </div>
+    <div class="p-5">
+      <ul class="list-disc list-inside">
+        <li>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempore,
+          non libero itaque repellendus dicta corrupti! Natus, hic incidunt
+          itaque deserunt dolor voluptatibus debitis, veritatis blanditiis
+          repudiandae aliquam reprehenderit nostrum.
+        </li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+      </ul>
+    </div>
+    <div class="p-5">
+      <ul class="list-decimal">
+        <li>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempore,
+          non libero itaque repellendus dicta corrupti! Natus, hic incidunt
+          itaque deserunt dolor voluptatibus debitis, veritatis blanditiis
+          repudiandae aliquam reprehenderit nostrum.
+        </li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+        <li>helloworld</li>
+      </ul>
+    </div>
+
+    <div class="w-32 h-32 bg-red-400"></div>
+    <br />
+    <div class="w-32 h-32 bg-red-400 rounded"></div>
+    <br />
+    <div class="w-32 h-32 bg-red-400 rounded-2xl"></div>
+    <br />
+    <div class="w-32 h-32 bg-red-400 rounded-full"></div>
+
+    <br />
+    <br />
+
+    <div class="border-t-4 border-red-400">hello world</div>
+    <br />
+    <div class="border-b-4 border-red-400">hello world</div>
+    <br />
+    <div class="border-l-4 border-red-400">hello world</div>
+    <br />
+    <div class="border-r-4 border-red-400">hello world</div>
+    <br />
+    <div class="box-border border-4 border-red-400">hello world</div>
+
+    <div class="mt-[17px]">hello world</div>
+
+    <div class="text-base">hello world</div>
+    <!-- <div class="text-5xl py-8">hello world</div> 세로 padding(top, bottom) -->
+    <!-- <div class="text-5xl px-8">hello world</div> 가로 padding -->
+    <!-- <div class="pb-4">hello world</div> padding bottom -->
+
+    <!-- https://tailwindcss.com/docs/font-weight -->
+    <!-- https://tailwindcss.com/docs/text-color -->
+    <div class="text-gray-700">hello world</div>
+    <div class="text-blue-500">hello world</div>
+    <div class="text-blue-500 m-5">hello world</div>
+    <div class="font-bold">hello world</div>
+
+    <!-- https://tailwindcss.com/docs/list-style-type -->
+    <div class="p-5">
+      <ul class="list-disc">
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+      </ul>
+    </div>
+
+    <div class="p-5">
+      <ul class="list-disc list-inside">
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero error
+          distinctio sint, dolorem, rem esse reiciendis explicabo fugit fuga
+          iusto doloremque saepe quia pariatur dicta illo consectetur
+          exercitationem, maxime nulla.
+        </li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+      </ul>
+    </div>
+
+    <div class="p-5">
+      <ol class="list-decimal">
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+      </ol>
+    </div>
+
+    <!-- rounded-full w24 -->
+    <!-- https://tailwindcss.com/docs/border-radius -->
+    <!-- https://tailwindcss.com/docs/border-width -->
+    <div class="rounded-full h-24 w-24 bg-red-300"></div>
+    <div class="border-t-4 border-indigo-500 m-3">hello</div>
+    <div class="border-2 border-red-700 m-3">hello</div>
+  </body>
+</html>
