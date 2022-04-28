@@ -2,9 +2,11 @@
 
 > Don't forget to code your dream.
 
-- [1일차🐤](https://github.com/chuhoon/LikeLion/tree/master/%EC%9D%B4%EB%A0%A5%EC%84%9C)
-
-- [2일차🦉](https://github.com/chuhoon/LikeLion/tree/master/FE1)
+|                                                                                                         |                                       :heart:                                        |                        :yellow_heart:                        |                        :green_heart:                         |                         :blue_heart:                         |                                :purple_heart:                                 |
+| :-----------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a> | [1일차](https://github.com/chuhoon/LikeLion/tree/master/%EC%9D%B4%EB%A0%A5%EC%84%9C) | [2일차](https://github.com/chuhoon/LikeLion/tree/master/FE1) | [3일차](https://github.com/chuhoon/LikeLion/tree/master/FE2) | [4일차](https://github.com/chuhoon/LikeLion/tree/master/FE4) | [4일차 챌린지](https://github.com/chuhoon/LikeLion/tree/master/FE4_challenge) |
+| <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a> |                                       테스트2                                        |                           테스트3                            |                           테스트4                            |                           테스트5                            |                                    테스트6                                    |
+| <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a> |                                       테스트2                                        |                           테스트3                            |                           테스트4                            |                           테스트5                            |                                    테스트6                                    |
 
 - [3일차:cat:](https://github.com/chuhoon/LikeLion/tree/master/FE2)
 
