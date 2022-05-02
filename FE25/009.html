@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let txt = 'ABCDEFGHIJKLMNABC';
+      let text_two = "mom said \'hello world\'";
+      let text_three = "mom said 'hello world'";
+      let number = '100';
+
+      document.write(number + number, "<br>");
+      document.write(Number(number) + Number(number), "<br>");
+      document.write(parseInt(number) + parseInt(number), '<br>');
+      document.write(+number + +number, '<br>');
+      document.write(`txt : ${txt} <br>`);
+      document.write(`txt : ${txt} <br>`);
+      
+      document.write(`100 + 100 = `, parseInt(number) + parseInt(number), "<br>");
+      document.write(number+number, '<br>');
+      document.write(number + 10, "<br>");
+      document.write(number - 10, "<br>");
+      document.write(number * 10, "<br>");
+
+      document.write(`txt.length : ${txt.length} <br>`);
+      document.write(`text[1] : ${txt[1]} <br>`);
+      document.write(`text_two : ${text_two} <br>`);
+
+      document.write(`txt.indexOf : ${txt.indexOf("F")} <br>`);
+      document.write(`txt.search : ${txt.search("FGH")} <br>`);
+
+      document.write(`txt.indexOf : ${txt.indexOf("Z")} <br>`);
+      document.write(`txt.search : ${txt.search("Z")} <br>`);
+      document.write(`txt.lastIndexOf : ${txt.lastIndexOf("Z")} <br>`);
+      document.write(`txt.slice(0, 3) : ${txt.slice(0, 3)} <br>`);
+      document.write(`txt.substring(0, 3) : ${txt.substring(0, 3)} <br>`);
+      document.write(`txt.substr(2, 5) : ${txt.substr(2, 5)} <br>`);
+
+      document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/g, 'hojun')} <br>`);
+      document.write(`txt.toUpperCase() : ${txt.toUpperCase()} <br>`);
+      document.write(`txt.toLowerCase() : ${txt.toLowerCase()} <br>`);
+
+      // 문자열의 내장 함수
+      document.write(txt.includes('ABC'), '<br>');
+      document.write(txt.startsWith('BCD'), '<br>');
+      document.write(txt.endsWith('AB'), '<br>');
+      document.write(txt.indexOf('AB', 3), '<br>');
+
+    </script>
+  </body>
+</html>
