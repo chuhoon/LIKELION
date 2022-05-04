@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>concat</title>
+  </head>
+  <body>
+    <script>
+      // 배열을 합치거나 새로운 요소를 추가할 때에는 concat()
+      /*
+        매개변수로 주어진 값 또는 배열을 이용해서
+        기존의 배열에 존재하던 요소를 사용해 새로운 배열을 만들 수 있고
+        기존 배열에 새로운 요소를 추가할 수도 있다.
+        주로 배열을 합치고자 할 때 자주 사용된다.
+        기존의 배열을 변경하지 않으며, 추가된 새로운 배열을 반환한다는 특징이 있다.
+      */
+      const cafe = ['coffee'];
+      console.log(cafe.concat(['cake']));
+      console.log(cafe.concat(['tea'], 'cookie'));
+      console.log(cafe.concat('tea', 'cookie'));
+    </script>
+  </body>
+</html>

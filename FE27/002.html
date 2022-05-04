@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map</title>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        {
+          name: 'title1',
+          contents: 'contents1',
+          dataNum: 1,
+          data: [1, 2, 3],
+          지역과날짜: ['한국', [22, 5, 4]],
+        },
+        {
+          name: 'title2',
+          contents: 'contents2',
+          dataNum: 2,
+          data: [1, 2, 3],
+          지역과날짜: ['한국', [23, 5, 4]],
+        },
+        {
+          name: 'title3',
+          contents: 'contents3',
+          dataNum: 3,
+          data: [1, 2, 100],
+          지역과날짜: ['한국', [22, 5, 4]],
+        },
+        {
+          name: 'title4',
+          contents: 'contents4',
+          dataNum: 4,
+          data: [1, 2, 3],
+          지역과날짜: ['한국', [23, 5, 4]],
+        },
+        {
+          name: 'title5',
+          contents: 'contents5',
+          dataNum: 5,
+          data: [1, 2, 100],
+          지역과날짜: ['한국', [22, 5, 4]],
+        },
+      ];
+
+      //  배열 내에 있는 요소에 오름차순으로 접근해서 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환한다.
+      cname = arr.map((i) => i.name);
+      cdata = arr.map((i) => i.data);
+      cdata2 = arr.map((i) => i.data[2]);
+      cdate = arr.map((i) => i['지역과날짜'][1][0]);
+      index = arr.map((value, index) => [index, value.contents]);
+      console.log(cname);
+      console.log(cdata);
+      console.log(cdata2);
+      console.log(cdate);
+      console.log(index);
+
+      arr2 = [1, 2, 4, 8, 16];
+      gop = arr2.map((i) => i * 2);
+      console.log(arr2);
+      console.log(gop);
+
+      function weniv(x) {
+        return x + 100;
+      }
+
+      // map과 forEach와 차이점 : map은 새로운 배열을 반환하지만 forEach는 순회만 한다.
+      plus = arr2.map(weniv);
+      console.log(plus);
+
+      arr2.forEach((i) => console.log(i));
+    </script>
+  </body>
+</html>
