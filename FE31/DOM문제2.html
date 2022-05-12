@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .cont {
+        width: 400px;
+        margin: 100px auto;
+      }
+      .box {
+        border: 3px solid black;
+        background-color: #fff;
+        width: 100%;
+        height: 400px;
+        margin-bottom: 30px;
+      }
+      .cont-btn {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="box"></div>
+      <ul class="cont-btn">
+        <li>
+          <button class="btn-red">red</button>
+        </li>
+        <li>
+          <button class="btn-green">green</button>
+        </li>
+        <li>
+          <button class="btn-pink">pink</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function changeColor() {
+        let btnColor = document.querySelectorAll('button');
+        console.log(btnColor);
+
+        let box = document.querySelector('.box');
+        console.log(box);
+
+        btnColor.forEach((i) => {
+          i.addEventListener('click', (j) => {
+            if (j.target.innerText == 'red') {
+              box.style.backgroundColor = 'red';
+            } else if (j.target.innerText == 'green') {
+              box.style.backgroundColor = 'green';
+            } else if (j.target.innerText == 'pink') {
+              box.style.backgroundColor = 'pink';
+            }
+          });
+        });
+      }
+
+      changeColor();
+    </script>
+  </body>
+</html>
