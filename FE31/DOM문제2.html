@@ -39,20 +39,17 @@
       </ul>
     </div>
     <script>
+      let btnColor = document.querySelectorAll('button');
+      let box = document.querySelector('.box');
+
       function changeColor() {
-        let btnColor = document.querySelectorAll('button');
-        console.log(btnColor);
-
-        let box = document.querySelector('.box');
-        console.log(box);
-
         btnColor.forEach((i) => {
           i.addEventListener('click', (j) => {
             if (j.target.innerText == 'red') {
               box.style.backgroundColor = 'red';
             } else if (j.target.innerText == 'green') {
               box.style.backgroundColor = 'green';
-            } else if (j.target.innerText == 'pink') {
+            } else {
               box.style.backgroundColor = 'pink';
             }
           });

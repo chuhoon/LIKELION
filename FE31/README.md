@@ -1,5 +1,7 @@
 # 31일차 DOM (Document Object Model)
 
+> DOM에 대해 학습하였습니다.
+
 ### DOM 이란?
 
 DOM 은 HTML 문서의 내용을 트리형태로 구조화하여 웹페이지와 프로그래밍 언어를 연결시켜주는 역할을 합니다. 이때 각각의 요소와 속성, 콘텐츠를 표현하는 단위를 **'노드(node)'**라고 합니다.
@@ -187,3 +189,154 @@ btnFirst.addEventListener('click', (***event***) => {
     console.log(event);
 });
 ```
+
+<br>
+
+### 이벤트 흐름
+
+브라우저 화면에서 이벤트가 발생하면 브라우저는 가장 먼저 이벤트 대상을 찾기 시작합니다.
+
+브라우저가 이벤트 대상을 찾아갈 때는 가장 상위의 window 객체부터 document, body 순으로 DOM 트리를 따라 내려갑니다. 이를 **캡처링 단계**라고 합니다.
+
+이때 이벤트 대상을 찾아가는 과정에서 브라우저는 중간에 만나는 모든 캡처링 이벤트 리스너를 실행시킵니다. 그리고 이벤트 대상을 찾고 캡처링이 끝나면 이제 다시 DOM 트리를 따라 올라가며 만나는 모든 버블링 이벤트 리스너를 실행합니다. 이를 이벤트 **버블링 단계**라고 합니다.
+
+그리고 이러한 과정에서 이벤트 리스너가 차례로 실행되는것을 **이벤트 전파**(event propagation)라고 합니다.
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style></style>
+  </head>
+
+  <body>
+    <article class="parent">
+      <button class="btn" type="button">버튼</button>
+    </article>
+
+    <script>
+      const parent = document.querySelector('.parent');
+      const btnFirst = document.querySelector('.btn');
+      btnFirst.addEventListener('click', (event) => {
+        console.log('btn capture!');
+      });
+
+      window.addEventListener(
+        'click',
+        () => {
+          console.log('window capture!');
+        },
+        true
+      ); // true : 캡처링 단계의 이벤트가 발생하도록 합니다.
+
+      document.addEventListener(
+        'click',
+        () => {
+          console.log('document capture!');
+        },
+        true
+      );
+
+      parent.addEventListener(
+        'click',
+        () => {
+          console.log('parent capture!');
+        },
+        true
+      );
+
+      btnFirst.addEventListener('click', (event) => {
+        console.log('btn bubble!');
+      });
+
+      parent.addEventListener('click', () => {
+        console.log('parent bubble!');
+      });
+
+      document.addEventListener('click', () => {
+        console.log('document bubble!');
+      });
+
+      window.addEventListener('click', () => {
+        console.log('window bubble!');
+      });
+    </script>
+  </body>
+</html>
+```
+
+<br>
+
+### 이벤트 위임
+
+앞에서 우리는 이벤트의 흐름을 통해 이벤트 리스너가 없는 요소의 이벤트가 발생했을 때도 해당 요소에 접근 할 수 있다는 것을 알게 되었습니다.
+
+이를 이용해 이벤트 리스너가 없어도 마치 리스너가 있는 것 처럼 사용 할 수 있습니다.
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style></style>
+  </head>
+
+  <body>
+    <article class="parent">
+      <ol>
+        <li><button class="btn-first" type="button">버튼1</button></li>
+        <li><button type="button">버튼2</button></li>
+        <li><button type="button">버튼3</button></li>
+      </ol>
+    </article>
+
+    <script>
+      const parent = document.querySelector('.parent');
+      parent.addEventListener('click', function (event) {
+        console.log(event.target);
+        if (event.target.nodeName === 'BUTTON') {
+          event.target.innerText = '버튼4';
+        }
+      });
+    </script>
+  </body>
+</html>
+```
+
+이러한 테크닉을 **이벤트 위임**이라고 합니다.
+
+<br>
+
+### 이벤트의 this
+
+이벤트 리스너 함수 내부에서의 this 값은 이벤트가 연결된 노드를 참조합니다.
+
+```html
+<article class="parent">
+  <ol>
+    <li><button class="btn-first" type="button">버튼1</button></li>
+    <li><button type="button">버튼2</button></li>
+    <li><button type="button">버튼3</button></li>
+  </ol>
+</article>
+
+<script>
+  const parent = document.querySelector('.parent');
+  parent.addEventListener('click', function (event) {
+    console.log(this);
+  });
+</script>
+```
+
+이는 event.currentTarget 속성의 참조값과 유사합니다.
+
+만약 이벤트 리스너 함수를 화살표 함수로 쓴다면 this 가 가리키는 대상이 달라진다는 점에 유의하세요.
