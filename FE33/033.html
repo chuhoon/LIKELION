@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      #app {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <app id="app">안녕하세요</app>
+    <script>
+      document
+        .getElementById('app')
+        .addEventListener('contextmenu', (event) => {
+          event.preventDefault();
+          alert('오른쪽 클릭 금지');
+        });
+    </script>
+  </body>
+</html>
