@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const foods = ['피자', '치킨', '햄버거', '볶음밥'];
+      const people = ['경훈', '추갱', '길동', '순신'];
+
+      let solution1 = new RandomFood(foods);
+      let solution2 = new RandomFood(people);
+
+      function RandomFood(food) {
+        this.menu = food;
+      }
+
+      RandomFood.prototype.randomMenu = function () {
+        console.log(this.menu[Math.floor(Math.random() * this.menu.length)]);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function NewFactory2(name) {
+        this.name = name;
+      }
+
+      // prototype은 메서드를 저장하는 공간
+      NewFactory2.prototype.sayYourName = function () {
+        console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+      };
+
+      const newbot1 = new NewFactory2('경훈');
+      const newbot2 = new NewFactory2('추갱');
+    </script>
+  </body>
+</html>

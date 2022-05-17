@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const me = {
+        name: '한재현',
+        address: '제주도 제주시 인다 1길',
+        phoneNum: '010-1234-1234',
+        canWalk: function () {
+          console.log('재현이가 걷는다.');
+        },
+        teaching: function (student) {
+          student.levelUp();
+        },
+      };
+
+      const student = {
+        level: 1,
+        levelUp: function () {
+          this.level++;
+        },
+      };
+
+      // 객체와 객체가 상호작용함 teaching <-> levelup
+      me.teaching(student);
+
+      // const chu = {
+      //   name: '추경훈',
+      //   age: '27',
+      //   phoneNum: '010-1234-5678',
+      //   learning: function () {
+      //     console.log('공부중입니다.');
+      //     lvstack.lvUp();
+      //     console.log(lvstack.lv);
+      //   },
+      // };
+
+      // const lvstack = {
+      //   lv: 1,
+      //   lvUp: function () {
+      //     this.lv++;
+      //   },
+      // };
+
+      // chu.learning(lvstack);
+
+      const library = {
+        name: '한마을',
+        getBook: function () {
+          console.log('책을 받았다.');
+          bookNum.getBookNum(bookNum.num);
+          console.log(bookNum.num);
+        },
+      };
+
+      const bookNum = {
+        num: 10,
+        getBookNum: function () {
+          this.num++;
+        },
+      };
+
+      library.getBook(bookNum);
+    </script>
+  </body>
+</html>
