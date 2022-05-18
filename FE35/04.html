@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class RobotClass {
+        constructor(name) {
+          this.name = name;
+        }
+
+        sayYourName() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+      }
+
+      const botClass1 = new RobotClass();
+      const botClass2 = new RobotClass();
+      console.log(botClass1.sayYourName());
+      console.log(botClass2.sayYourName());
+    </script>
+  </body>
+</html>
