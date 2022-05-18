@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 수정이 가능한 것을 볼 수 있다.
+      class Robot1 {
+        constructor(name) {
+          this.name = name;
+        }
+
+        sayYourName() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+      }
+
+      const bot = new Robot1('smith');
+
+      bot.name; // smith
+
+      // 비공개 프로퍼티
+      class Robot2 {
+        #password;
+
+        constructor(name, pw) {
+          this.name = name;
+          this.#password = pw;
+        }
+
+        sayYourName() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+
+        getPassword() {
+          return this.#password;
+        }
+
+        setPassword(pw) {
+          this.#password = pw;
+        }
+      }
+
+      const bot2 = new Robot2('경훈', 1234);
+    </script>
+  </body>
+</html>

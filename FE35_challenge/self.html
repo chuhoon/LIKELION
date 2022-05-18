@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Todolist {
+        constructor(item, state) {
+          this.item = item;
+          this.state = state;
+        }
+
+        changeState() {
+          this.state = !this.state;
+        }
+      }
+
+      class TodolistManager {
+        constructor() {
+          this.todolist = [];
+        }
+
+        addItem(item, state = false) {
+          const solution = new Todolist(item, state);
+          this.todolist.push(solution);
+        }
+
+        getItems() {
+          return this.todolist;
+        }
+
+        getLeftTodolist() {
+          return this.todolist.filter((i) => i.state == false).length;
+        }
+      }
+
+      const todos = new TodolistManager();
+    </script>
+  </body>
+</html>

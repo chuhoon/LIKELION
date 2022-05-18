@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>ToDolist</h1>
+    <article>
+      <input type="text" id="input-box" />
+      <button class="btn-input">추가</button>
+      <div id="cont-list"></div>
+    </article>
+    <script>
+      class Todo {
+        constructor(item, finished) {
+          this.item = item;
+          this.finished = finished;
+        }
+
+        changeState() {
+          this.finished = !this.finished;
+        }
+      }
+
+      class TodoManager {
+        constructor() {
+          this.todoList = [];
+        }
+
+        addItem(item, finished = false) {
+          const todo = new Todo(item, finished);
+          this.todoList.push(todo);
+        }
+
+        getItems() {
+          return this.todoList;
+        }
+
+        getLeftTodoCount(finished) {
+          // return this.todoList.filter((todoList) => todoList.finished == false)
+          //   .length;
+
+          return this.todoList.reduce((total, current) => {
+            if (current.finished === false) {
+              return ++total;
+            } else {
+              return total;
+            }
+          }, 0);
+        }
+      }
+
+      const todos = new TodoManager();
+    </script>
+  </body>
+</html>
