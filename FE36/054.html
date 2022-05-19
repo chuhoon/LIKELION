@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var me = { age: 30 };
+      var you = me;
+      // {age:30} 참조 카운 : 2
+
+      me = null;
+      // {age:30} 참조 카운 : 1
+
+      you = null;
+      // {age:30} 참조 카운 : 0 => 가비지 컬렉션 대상
+
+      // case.2
+      var x = {
+        y: {
+          z: 1,
+        },
+      };
+
+      // x가 참조하는 객체는 obj1, y가 참조하는 객체는 obj2
+
+      var a = x; // obj1 참조카운트 : 2
+      x = 1; // obj1 참조카운트 : 1
+
+      var b = a.y; // obj2 참조카운트 : 2
+      a = 2; // obj2 참조카운트 : 1, obj1 참조카운트 : 1
+
+      // case.3 클로져 메모리 누수문제
+      function outer() {
+        let privateVal = ['test'];
+
+        function getPrivate() {
+          return privateVal;
+        }
+
+        return getPrivate;
+      }
+
+      const private = outer();
+      let secretVal = private();
+
+      console.log(secretVal);
+      secretVal = null;
+
+      const aespa = ['카리나', '윈터', '지젤', '닝닝'];
+      // aespa.forEach((item, index) => {
+      //   aespa[index] = item + '💖';
+      // });
+
+      const aespa2 = aespa.map((item) => {
+        return item + '💖';
+      });
+
+      console.log(aespa);
+      console.log(aespa2);
+    </script>
+  </body>
+</html>
