@@ -21,8 +21,8 @@ function start() {
 
 function reset() {
   elResetBtn.addEventListener('click', () => {
-    sec = '00';
-    elsecond.innerText = `${sec}`;
+    sec = 0;
+    elsecond.innerText = `0${sec}`;
   });
 }
 
