@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.red {
+  color: red;
+}
+
+.white {
+  color: #fff;
+}
+
+.cont-question1 {
+  background-color: black;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
