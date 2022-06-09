@@ -34,31 +34,21 @@
       type="text/babel"
       src="./data/data.js"
     ></script>
+    <script
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+      src="./components/Main.js"
+    ></script>
+    <script
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+      src="./components/Card.js"
+    ></script>
     <script data-plugins="transform-es2015-modules-umd" type="text/babel">
       import { data } from './data/data.js';
+      import { Main } from './components/Main.js';
+      import { Card } from './components/Card.js';
       // console.log(data)
-      const Main = () => <h1 class="ir">상품페이지 목록</h1>;
-
-      const Card = ({ goods }) => {
-        const url = 'http://test.api.weniv.co.kr/' + goods.thumbnailImg;
-        return (
-          <li class="product-item">
-            <div class="product-img">
-              <img src={url} />
-            </div>
-            <strong class="product-name sl-ellipsis">
-              {goods.productName}
-            </strong>
-            <button class="like-btn"></button>
-            <div class="product-price">
-              <strong class="price m-price">
-                {goods.price}
-                <span>원</span>
-              </strong>
-            </div>
-          </li>
-        );
-      };
 
       const Cart = () => <a class="link-btn cart-link" href="#"></a>;
 
