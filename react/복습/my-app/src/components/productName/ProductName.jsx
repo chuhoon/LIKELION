@@ -1,6 +1,7 @@
-import React from 'react';
-import './productName.css';
+import './productName.css'
 
-export default function ProductName({ productName }) {
-  return <strong className="product-name sl-ellipsis">{productName}</strong>;
+export default function ProductName({productName}) {
+  return (
+    <strong className="product-name sl-ellipsis">{productName}</strong>
+  )
 }

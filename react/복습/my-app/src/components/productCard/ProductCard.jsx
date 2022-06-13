@@ -1,15 +1,19 @@
-import React from 'react';
-import ProductImage from '../productImage/ProductImage.jsx';
-import ProductName from '../productName/ProductName.jsx';
-import ProductPrice from '../productPrice/ProductPrice.jsx';
-import './productCard.css';
+import ProductImage from '../ProductImage/ProductImage'
+import ProductName from '../ProductName/ProductName'
+import ProductPrice from '../ProductPrice/ProductPrice'
+import './productCard.css'
 
-export default function ProductCard({ productName, price, thumbnailImg }) {
-  return (
-    <>
-      <ProductImage thumbnailImg={thumbnailImg} productName={productName} />
-      <ProductName productName={productName} />
-      <ProductPrice price={price} />
-    </>
-  );
+export default function ProductCard({productName, price, thumbnailImg}){
+    return (
+        <li className="product-item">
+            <div className="product-img">
+                <ProductImage thumbnailImg={thumbnailImg} productName={productName}/>
+            </div>
+                <ProductName productName={productName}/>
+            <button className="like-btn"></button>
+            <div className="product-price">
+                <ProductPrice price={price}/>
+            </div>
+        </li>
+    )
 }
