@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+- `npx create-react-app my-app && cd my-app && npm install styled-components`
+- 컴포넌트는 Object일 뿐이다! 대단한 새로운 개념이 아니다!
+- {arr.map()}형태나 {[a, b, c, d]}형태 또는 직접 arr를 {arr}에 넣는 경우 각 요소는 형제들 중 유일한 key값을 가지고 있어야 합니다.
+- 결국에는 props로 전체 UI를 그리게 되는 것! -> 그러면 props 건드려서 상위로 값이 전파되게 할 수 있을까? -> 전파가 되면 상위 요소가 재렌더링 되야 하는데...
+- 재렌더링 기준
+  1. 내 state(useState로 선언한 변수 등)가 수정될 때
+  2. 내 부모가 재렌더링 될 때
+  3. 내 props가 변경되었을 때
+- object로 css 작성하는 방법
+- tagged template literal
+  - https://medium.com/@su_bak/javascript-tagged-template-literals%EB%9E%80-d7dca9461a45
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+const name = '이호준'
+const age = 10
 
-## Available Scripts
+    function 인사(문구, 이름, 나이){
+        // console.log(문구)
+        console.log(문구, 이름, 나이)
+        return ${문구[0]}${이름}${문구[1]}${나이+나이}${문구[2]}
+    }
 
-In the project directory, you can run:
+    const 인사문구 = 인사이름은 ${name}이고 나이는 ${age+age}입니다.
 
-### `npm start`
+    console.log(인사문구)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    * 위에서 나온 예제와 같이 여기서 태그명은 실제로는 함수입니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+jsx
+const 변수명 = styled.태그명
+background-color : red;
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    * 편의 기능
+        * auto import 익스텐션
+        * https://minimin2.tistory.com/47
+        * https://react.vlpt.us/basic/27-useful-tools.html
+        * vscode-styled-components 익스텐션을 설치하면 rfc를 입력하면 자동완성 되긴 합니다.
