@@ -1,0 +1,17 @@
+.supportBox {
+  background-color: hsl(222, 14%, 10%);
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
+
+.supportLink {
+  color: #61dafb;
+}
+
+.header {
+  background-color: #20232a;
+  font-size: 18px;
+  color: #fff;
+}
