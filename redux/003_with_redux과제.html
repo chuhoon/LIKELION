@@ -2,193 +2,199 @@
 <html>
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&family=Fascinate&family=Kdam+Thmor+Pro&family=Noto+Sans+KR:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        border: 5px solid black;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .item {
+        border: 5px solid #f6866a;
+        height: 100px;
+        padding: 20px;
+        font-size: 32px;
+      }
+
+      .item:nth-child(1) {
+        font-family: 'Anek Malayalam', sans-serif;
+      }
+
+      .item:nth-child(2) {
+        font-family: 'Fascinate', cursive;
+      }
+
+      .item:nth-child(3) {
+        font-family: 'Kdam Thmor Pro', sans-serif;
+      }
+
+      .item:nth-child(4) {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+
+      .item:nth-child(5) {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .item:nth-child(6) {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
   </head>
 
   <body>
-    <style>
-      .container {
-        width: 300px;
-        height: 200px;
-        border: 5px solid black;
-        padding: 10px;
-      }
+    <input type="text" id="inputText" />
+    <input
+      type="button"
+      value="눌러버렷!"
+      onclick="
+        const value = document.getElementById('inputText').value
+        store.dispatch({type:'TEXT', text:value})
+    "
+    />
+    <input
+      type="button"
+      value="Rounded!"
+      onclick="
+        store.dispatch({type:'STYLE_BORDER', borderRadius:'10px'})
+    "
+    />
+    <input
+      type="button"
+      value="Circle!"
+      onclick="
+        store.dispatch({type:'STYLE_BORDER', borderRadius:'20px'})
+    "
+    />
+    <input
+      type="button"
+      value="Rect!"
+      onclick="
+        store.dispatch({type:'STYLE_BORDER', borderRadius:'0px'})
+    "
+    />
+    <input
+      type="button"
+      value="Red!"
+      onclick="
+        store.dispatch({type:'STYLE_BORDER_COLOR', border:'5px solid red'})
+    "
+    />
+    <input
+      type="button"
+      value="Green!"
+      onclick="
+        store.dispatch({type:'STYLE_BORDER_COLOR', border:'5px solid green'})
+    "
+    />
+    <input
+      type="button"
+      value="Blue!"
+      onclick="
+        store.dispatch({type:'STYLE_BORDER_COLOR', border:'5px solid blue'})
+    "
+    />
+    <br />
+    <br />
+    <div class="container">
+      <div id="item1" class="item"></div>
+      <div id="item2" class="item"></div>
+      <div id="item3" class="item"></div>
+      <div id="item4" class="item"></div>
+      <div id="item5" class="item"></div>
+      <div id="item6" class="item"></div>
+    </div>
 
-      li {
-        list-style: none;
-        margin: 20px;
-      }
-
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    </style>
-    <input id="input-txt" type="text" />
-    <button id="txtBtn">버튼</button>
-    <button id="red">red</button>
-    <button id="green">green</button>
-    <button id="blue">blue</button>
-    <ul>
-      <li id="one"></li>
-      <li id="two"></li>
-      <li id="three"></li>
-      <li id="four"></li>
-      <li id="five"></li>
-      <li id="six"></li>
-    </ul>
     <script>
-      // state는 현재 상태, action은 주문 받은 것!
+      const store = Redux.createStore(reducer);
       function reducer(state, action) {
         console.log(state, action);
-        // 초기값 노란색으로 받아옴
         if (state === undefined) {
-          return { color: 'black', text: '' };
+          return {
+            text: 'hello',
+            color: 'black',
+            border: '5px solid #f6866a',
+            borderRadius: '0px',
+          };
+        } else if (action.type === 'TEXT') {
+          return {
+            ...state,
+            text: action.text,
+          };
+        } else if (action.type === 'STYLE_BORDER') {
+          return {
+            ...state,
+            borderRadius: action.borderRadius,
+          };
+        } else if (action.type === 'STYLE_BORDER_COLOR') {
+          return {
+            ...state,
+            border: action.border,
+          };
         }
-        var newState;
-        if (action.type === 'CHANGE_COLOR') {
-          //복제해야 합니다. 그냥 {color:'red'}이런 식으로 리턴해줘도 되긴 하는데 리덕스의 고급기능을 쓰지 못합니다.
-          // Object.assign({}, 빈객체에 복제할 값1, 빈객체에 복제할 값2...);
-          newState = { ...state, color: action.color };
-          console.log(state);
-          console.log(newState);
-        } else if (action.type === 'CHANGE_TEXT') {
-          newState = { ...state, text: action.text };
-          console.log(state);
-          console.log(newState);
-        }
-
-        return newState;
       }
-      // Redux는 cdn으로 생깁니다.
-      var store = Redux.createStore(
-        reducer,
-        window.__REDUX_DEVTOOLS_EXTENSION__ &&
-          window.__REDUX_DEVTOOLS_EXTENSION__() // redux dev tools를 사용하기 위한 코드
-      );
-
-      const textBtn = document.querySelector('#txtBtn');
-      const inputTxt = document.querySelector('#input-txt');
-
-      function onChangeTextBtn() {
-        var state = store.getState();
-        //type은 반드시 있어야 합니다.
-        // 바뀔 때마다 console에 store.getState()를 실행해보세요.
-        txtBtn.addEventListener('click', function () {
-          console.log(inputTxt);
-          store.dispatch({ type: 'CHANGE_TEXT', text: inputTxt.value });
-        });
+      function item1() {
+        const state = store.getState();
+        const $item = document.querySelector('#item1');
+        $item.innerText = `${state.text}`;
+        $item.style.borderRadius = `${state.borderRadius}`;
+        $item.style.border = `${state.border}`;
       }
-      // 값이 바뀔 때마다 red 함수를 호출
-      store.subscribe(onChangeTextBtn);
-      onChangeTextBtn();
+      store.subscribe(item1);
+      item1();
 
-      function red() {
-        var state = store.getState();
-        //type은 반드시 있어야 합니다.
-        // 바뀔 때마다 console에 store.getState()를 실행해보세요.
-        const redBtn = document.querySelector('#red');
-        redBtn.addEventListener('click', function () {
-          store.dispatch({ type: 'CHANGE_COLOR', color: 'red' });
-        });
+      function item2() {
+        const state = store.getState();
+        const $item = document.querySelector('#item2');
+        $item.innerText = `${state.text}`;
+        $item.style.borderRadius = `${state.borderRadius}`;
       }
-      // 값이 바뀔 때마다 red 함수를 호출
-      store.subscribe(red);
-      red();
+      store.subscribe(item2);
+      item2();
 
-      function green() {
-        var state = store.getState();
-        //type은 반드시 있어야 합니다.
-        // 바뀔 때마다 console에 store.getState()를 실행해보세요.
-        const greenBtn = document.querySelector('#green');
-        greenBtn.addEventListener('click', function () {
-          store.dispatch({ type: 'CHANGE_COLOR', color: 'green' });
-        });
+      function item3() {
+        const state = store.getState();
+        const $item = document.querySelector('#item3');
+        $item.innerText = `${state.text}`;
+        $item.style.borderRadius = `${state.borderRadius}`;
       }
-      // 값이 바뀔 때마다 red 함수를 호출
-      store.subscribe(green);
-      green();
+      store.subscribe(item3);
+      item3();
 
-      function blue() {
-        var state = store.getState();
-        //type은 반드시 있어야 합니다.
-        // 바뀔 때마다 console에 store.getState()를 실행해보세요.
-        const blueBtn = document.querySelector('#blue');
-        blueBtn.addEventListener('click', function () {
-          store.dispatch({ type: 'CHANGE_COLOR', color: 'blue' });
-        });
+      function item4() {
+        const state = store.getState();
+        const $item = document.querySelector('#item4');
+        $item.innerText = `${state.text}`;
+        $item.style.borderRadius = `${state.borderRadius}`;
       }
-      // 값이 바뀔 때마다 red 함수를 호출
-      store.subscribe(blue);
-      blue();
+      store.subscribe(item4);
+      item4();
 
-      function one() {
-        var state = store.getState();
-        //type은 반드시 있어야 합니다.
-        // 바뀔 때마다 console에 store.getState()를 실행해보세요.
-        document.querySelector('#one').innerHTML = `
-                <div class="container" id="component_red" style="border-color:${state.color}; font-size:25px ">
-                  ${state.text}
-                </div>
-            `;
+      function item5() {
+        const state = store.getState();
+        const $item = document.querySelector('#item5');
+        $item.innerText = `${state.text}`;
+        $item.style.borderRadius = `${state.borderRadius}`;
       }
-      // 값이 바뀔 때마다 red 함수를 호출
-      store.subscribe(one);
-      one();
+      store.subscribe(item5);
+      item5();
 
-      function two() {
-        var state = store.getState();
-        document.querySelector('#two').innerHTML = `
-                <div class="container" id="component_blue" style="border-color:${state.color}; font-size:40px">
-                  ${state.text}
-                </div>
-            `;
+      function item6() {
+        const state = store.getState();
+        const $item = document.querySelector('#item6');
+        $item.innerText = `${state.text}`;
+        $item.style.borderRadius = `${state.borderRadius}`;
       }
-      store.subscribe(two);
-      two();
-
-      function three() {
-        var state = store.getState();
-        document.querySelector('#three').innerHTML = `
-                <div class="container" id="component_green" style="border-color:${state.color}; font-size:14px">
-                  ${state.text}
-                </div>
-            `;
-      }
-      store.subscribe(three);
-      three();
-
-      function four() {
-        var state = store.getState();
-        document.querySelector('#four').innerHTML = `
-                <div class="container" id="component_green" style="border-color:${state.color}; font-size:32px">
-                  ${state.text}
-                </div>
-            `;
-      }
-      store.subscribe(four);
-      four();
-
-      function five() {
-        var state = store.getState();
-        document.querySelector('#five').innerHTML = `
-                <div class="container" id="component_green" style="border-color:${state.color}; font-size:50px">
-                  ${state.text}
-                </div>
-            `;
-      }
-      store.subscribe(five);
-      five();
-
-      function six() {
-        var state = store.getState();
-        document.querySelector('#six').innerHTML = `
-                <div class="container" id="component_green" style="border-color:${state.color}; font-size:18px">
-                  ${state.text}
-                </div>
-            `;
-      }
-      store.subscribe(six);
-      six();
+      store.subscribe(item6);
+      item6();
     </script>
   </body>
 </html>
