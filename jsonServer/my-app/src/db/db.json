@@ -150,5 +150,25 @@
       "pubDate": "2022-02-28",
       "modDate": "2022-02-28"
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "date": "2022-06-20",
+      "email": "khchu1111@naver.com",
+      "phone": "010-1111-1111"
+    },
+    {
+      "id": 2,
+      "date": "2022-06-21",
+      "email": "khchu2222@naver.com",
+      "phone": "010-2222-2222"
+    },
+    {
+      "id": 3,
+      "date": "2022-06-22",
+      "email": "khchu33330@naver.com",
+      "phone": "010-3333-3333"
+    }
   ]
 }
