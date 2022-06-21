@@ -6,7 +6,7 @@ function GoodsCounter() {
     stock: state.goodsReducer.stock,
     goods: state.goodsReducer.goods,
   }));
-  console.log(stock, goods);
+  // console.log(stock, goods);
 
   const dispatch = useDispatch();
 
