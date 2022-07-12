@@ -1,0 +1,20 @@
+.nav {
+    background-color: royalblue;
+    padding: 20px 30px;
+}
+
+.nav .list_nav {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.nav .tit {
+    color: #fff;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+}
